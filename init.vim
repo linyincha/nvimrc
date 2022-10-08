@@ -42,6 +42,7 @@ nnoremap <C-k> 7k
 noremap L 7l
 noremap n nzz
 noremap N Nzz
+noremap U <C-r>
 inoremap <C-k> <UP>
 inoremap <C-j> <DOWN>
 inoremap <C-h> <LEFT>
@@ -101,6 +102,8 @@ Plug 'tpope/vim-surround'
 Plug 'gcmt/wildfire.vim'
 " 多光标操作
 Plug 'mg979/vim-visual-multi'
+" 按下分号后，可视化显示寄存器
+Plug 'junegunn/vim-peekaboo'
 call plug#end()
 
 " === Plug snazzy
@@ -117,7 +120,11 @@ let g:coc_global_extensions = [
   \ 'coc-json',
   \ 'coc-vimlsp',
   \ 'coc-snippets',
+  \ 'coc-yank',
   \ 'coc-explorer']
+
+" 剪贴板历史
+nnoremap <silent> <space>y  :<C-u>CocList -A --normal yank<cr>
 
 inoremap <silent><expr> <TAB>
       \ coc#pum#visible() ? coc#pum#next(1) :
