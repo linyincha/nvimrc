@@ -31,7 +31,7 @@ au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g
 
 " ==================== Basic Mappings ====================
 noremap ; :
-nnoremap q :q<CR>
+nnoremap Q :q<CR>
 nnoremap S :w<CR>
 noremap <LEADER><CR> :nohlsearch<CR>
 noremap H 7h
@@ -95,7 +95,7 @@ Plug 'junegunn/fzf.vim'
 
 Plug 'airblade/vim-gitgutter'
 " 浏览器实时预览markdown
-Plug 'instant-markdown/vim-instant-markdown', {'for': 'markdown', 'do': 'yarn install'}
+"Plug 'instant-markdown/vim-instant-markdown', {'for': 'markdown', 'do': 'yarn install'}
 " 快速修改代码包裹
 Plug 'tpope/vim-surround'
 " 快速选择代码块
@@ -146,10 +146,13 @@ let g:coc_snippet_prev = '<c-m>'
 noremap tt :CocCommand explorer<CR>
 
 " === FZF
-noremap <C-f> :FZF
+noremap <C-f> :FZF<CR>
 noremap <LEADER>ag :Ag<CR>
 noremap <LEADER>ah :History<CR>
 
 let g:VM_maps = {}
 let g:VM_maps["Select Cursor Down"] = '<C-=>'
 let g:VM_maps["Select Cursor Up"]   = '<C-+>'
+
+" 添加自定义代码片段
+source ~/.config/nvim/snippits.vim
