@@ -74,5 +74,6 @@
       "open"
     ],
     "I": "open:vsplit"
-  }
+  },
+  "snippets.ultisnips.pythonPrompt": false
 }

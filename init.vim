@@ -49,12 +49,12 @@ inoremap <C-h> <LEFT>
 inoremap <C-l> <RIGHT>
 inoremap <C-p> <ESC>jA
 inoremap <C-o> <ESC>o
-noremap <C-u> 0
+noremap <C-y> 0
 " === 原本的C-i是回到光标原来的位置，配合C-o使用
 noremap <C-p> <C-i>
-noremap <C-i> $
-inoremap <C-i> <ESC>A
-inoremap <C-u> <ESC>I
+noremap <C-u> $
+inoremap <C-u> <ESC>A
+inoremap <C-y> <ESC>I
 noremap <LEADER><LEADER> /<++><CR>:nohlsearch<CR>c4l
 " === 与系统共享剪贴板，快捷键双引号加号再复制会复制到剪贴板中
 vnoremap Y "+y
